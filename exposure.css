@@ -1,1 +1,22 @@
 
+
+.p-4 {
+  padding: 2rem !important;
+}
+
+.mr-2 {
+  margin-right: 1rem !important;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+.selectInput{
+  height: 30px;width: 200px;padding: 5px;
+}
+.max-w-200 {
+  max-width: 200px;
+}
+.title{
+  width: 30% !important;text-align: right;background-color: rgba(0,0,0,0.1);padding-right: 10px
+}
