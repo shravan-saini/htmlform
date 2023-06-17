@@ -16,7 +16,7 @@
               <tr>
                 <th class="title">Fund Group Id</th>
                 <td>
-                    <select name="fundGroupId" style="height: 30px;width: 200px;padding: 5px;" ng-model="addModal.fundGrpId">
+                    <select name="fundGroupId" class="selectInput" ng-model="addModal.fundGrpId">
                         <option ng-value="null"> Select Fund Group Id </option>
                         <option ng-repeat="fundId in fundGroupIds">{{fundId}}</option>
                     </select>
@@ -26,7 +26,7 @@
               <tr>
                 <th class="title">Limit Type</th>
                 <td>
-                    <select name="limitTypeId" style="height: 30px;width: 200px;padding: 5px;" ng-model="addModal.limitBusGrpId">
+                    <select name="limitTypeId" class="selectInput" ng-model="addModal.limitBusGrpId">
                         <option ng-value="null"> Select Limit Type </option>
                         <option ng-repeat="type in limitType">{{type}}</option>
                     </select>
@@ -36,7 +36,7 @@
               <tr>
                 <th class="title">Limit Name</th>
                 <td>
-                    <select name="limitName" style="height: 30px;width: 200px;padding: 5px;" ng-model="addModal.limitName">
+                    <select name="limitName" class="selectInput" ng-model="addModal.limitName">
                         <option ng-value="null"> Select Limit Name </option>
                         <option ng-repeat="name in limitName">{{name}}</option>
                     </select>
@@ -47,7 +47,7 @@
               <tr>
                 <th class="title">Minimum Exposure in %</th>
                 <td>
-                    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control" style="max-width: 200px;" ng-model="addModal.minExpoPct" id="minExpoPct">
+                    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control max-w-200"  ng-model="addModal.minExpoPct" id="minExpoPct">
                 </td>
                 
               </tr>
@@ -57,7 +57,7 @@
               <tr>
                 <th class="title">Maximum Exposure in %</th>
                 <td>
-                    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control" style="max-width: 200px;" ng-model="addModal.maxExpoPct" id="maxExpoPct">
+                    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control max-w-200"  ng-model="addModal.maxExpoPct" id="maxExpoPct">
                 </td>
                 
               </tr>
@@ -66,7 +66,7 @@
               <tr>
                 <th class="title">Minimum Exposure in Days</th>
                 <td>
-                    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control" style="max-width: 200px;" ng-model="addModal.minExpoDay" id="minExpoDay">
+                    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control max-w-200"  ng-model="addModal.minExpoDay" id="minExpoDay">
                     
                 </td>
                 
@@ -76,7 +76,7 @@
               <tr>
                 <th class="title">Maximum Exposure in Days</th>
                 <td>
-                    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control" style="max-width: 200px;" ng-model="addModal.maxExpoDay" id="maxExpoDay">
+                    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control max-w-200"  ng-model="addModal.maxExpoDay" id="maxExpoDay">
                     
                 </td>
                 
