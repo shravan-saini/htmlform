@@ -1,0 +1,89 @@
+
+<div class="col-12 p-4" style="padding: 2rem;">
+
+
+    <div class="col-12 p-0">
+        <button type="button" ng-click="onClickBack()" class="btn mr-2">Back</button>
+        <button type="button" ng-click="onClickDelete()" class="btn btn-danger mr-2">Delete</button>
+        <button type="button" ng-click="onClickSave()" class="btn btn-primary">Save</button>
+    </div>
+
+
+    <div class="col-12 mt-2" style="margin-top:1rem;">
+
+        <table class="table">
+           
+            <tbody>
+              <tr>
+                <th class="title">Cumm. Group Name</th>
+                <td>
+                    <input type="text"  class="form-control max-w-200"  ng-model="cummGroupModal.groupName" name="groupName">
+                </td>
+                <td colspan="2">
+                    <span ng-if="formSubmitted && !cummGroupModal.groupName" style="color: red;" id="groupName"> Input Required</span>
+                </td>
+                
+              </tr>
+              <tr>
+                <th class="title">Fund Group Id</th>
+                <td >
+                    <select multiple="true" name="groupMembers" class="selectInput" ng-model="cummGroupModal.groupMembers">
+                        <option ng-value="null"> Select Cumm. Group Member </option>
+                        <option ng-repeat="option in cummGroupMemberOptions">{{option}}</option>
+                    </select>
+                </td>
+                <td colspan="2">
+                    <span ng-if="formSubmitted && !cummGroupModal.groupMembers" style="color: red;" id="groupMembers"> Input Required</span>
+                </td>
+                
+              </tr>
+             
+              <tr>
+                <th class="title">Last Updated By</th>
+                <td style="width: 300px;">
+                   {{cummGroupModal.lastUpdatedBY}}
+                    
+                </td>
+                <th class="title">Date Time Changed</th>
+                <td>
+                   {{cummGroupModal.dateTimeChanged}}
+                </td>
+                
+              </tr>
+
+
+
+            </tbody>
+          </table>
+
+    </div>
+
+
+</div>
+<div class="modal fade"  id="responseModal" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" style="top:20%">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div> -->
+        <div class="modal-body">
+          <p ng-if="errorMessageModal.successMessage">{{errorMessageModal.successMessage}}</p>
+          <p ng-if="errorMessageModal.errorMessage">Error: {{errorMessageModal.errorMessage}}</p>
+          <p ng-if="errorMessageModal.confirmMessage">{{errorMessageModal.confirmMessage}}</p>
+        </div>
+        <div ng-show="errorMessageModal.confirmMessage" class="modal-footer">
+            <button type="button" class="btn btn-default" ng-click="onClickYes()" >Yes</button>
+            <button type="button" class="btn btn-default" ng-click="errorMessageModal.reset()">Cancel</button>
+        </div>
+        
+<!-- data-dismiss="modal" -->
+        <div ng-show="errorMessageModal.successMessage || errorMessageModal.errorMessage" class="modal-footer">
+            <button type="button" class="btn btn-default" ng-click="errorMessageModal.reset()">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
