@@ -1,1 +1,11 @@
 enableRowSelection: true, enableRowHeaderSelection: false, multiSelect:false
+
+
+
+
+onRegisterApi: function (gridApi) { 
+ gridApi.selection.on.rowSelectionChanged($scope, function (row) {
+    
+      localStorage.setItem('exposure'+row.limitSeqId, row)
+    });
+}};
