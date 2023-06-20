@@ -9,3 +9,16 @@ onRegisterApi: function (gridApi) {
       localStorage.setItem('exposure'+row.limitSeqId, row)
     });
 }};
+
+
+
+
+
+var row = {limitSeqId:'wwdwd'}
+
+var url = window.location.href+"?exposureId="+row.limitSeqId
+
+window.open(url,"_self")
+
+
+
