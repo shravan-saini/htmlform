@@ -48,3 +48,67 @@ window.open(url,"_self")
 
 
 
+
+
+
+
+
+
+$scope.onClickEdit = function(){
+    console.log('$scope.selectedRow = ', $scope.selectedRow)
+    if(!$scope.selectedRow){
+     return;
+    }
+
+    window.open(window.location.origin+'/exposure/exposureLimitsMaintainanceAddReport.html?exposureId='+$scope.selectedRow.limitSeqId&mode='edit', '_self')
+
+}
+
+
+
+&mode='view'
+
+ng-if="formMode == 'edit' || formMode == 'add'"
+
+
+<span ng-if="formMode == 'view'"> {{exposureLimitModel.fundGrpId}} </span>
+
+<span ng-if="formMode == 'view'"> {{exposureLimitModel.limitTypeCd}} </span>
+
+<span ng-if="formMode == 'view'"> {{exposureLimitModel.limitId}} </span>
+
+<span ng-if="formMode == 'view'"> {{exposureLimitModel.minExpoPct}} </span>
+
+<span ng-if="formMode == 'view'"> {{exposureLimitModel.maxExpoPct}} </span>
+
+<span ng-if="formMode == 'view'"> {{exposureLimitModel.minExpoDay}} </span>
+
+<span ng-if="formMode == 'view'"> {{exposureLimitModel.maxExpoDay}} </span>
+
+
+
+
+
+$scope.onClickNew = function(){
+  $scope.exposureLimitModel = {
+
+
+  }
+  $scope.formMode = 'add';
+}
+
+$scope.onClickView = function(){
+ 
+  $scope.formMode = 'view';
+}
+
+
+
+
+
+
+
+
+
+
+
