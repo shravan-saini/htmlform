@@ -68,6 +68,13 @@ $scope.onClickEdit = function(){
 
 &mode='view'
 
+
+if(item && item.mode){
+  $scope.formMode = item.mode
+}else{
+ $scope.formMode = 'add'
+}
+
 ng-if="formMode == 'edit' || formMode == 'add'"
 
 
