@@ -125,6 +125,7 @@ if(data.message){
 }
 
 
+ng-if="formMode == 'view' || formMode == 'edit'"
 
 
 
