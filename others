@@ -127,5 +127,7 @@ if(data.message){
 
 ng-if="formMode == 'view' || formMode == 'edit'"
 
+delete $scope.exposureLimitModel.isActive
+delete $scope.exposureLimitModel.dateTimeChanged
 
 
