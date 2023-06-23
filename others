@@ -131,3 +131,16 @@ delete $scope.exposureLimitModel.isActive
 delete $scope.exposureLimitModel.dateTimeChanged
 
 
+
+
+
+
+
+
+$http({
+
+      method: 'DELETE',
+      url: 'https://jsonplaceholder.typicode.com/users/' + user.id
+       data: $scope.exposureLimitModel
+    })
+
