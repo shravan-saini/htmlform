@@ -17,23 +17,25 @@
               <tr>
                 <th class="title">Cumm. Group Name</th>
                 <td>
-                    <input type="text"  class="form-control max-w-200"  ng-model="cummGroupModal.groupName" name="groupName">
+                    <input type="text" ng-if="formMode=='edit' || formMode=='add'" class="form-control max-w-200"  ng-model="cummGroupModal.cumGrpName" name="groupName">
+                    <span ng-if="formMode=='view'">{{cummGroupModal.cumGrpName}}</span>
                 </td>
                 <td colspan="2">
-                    <span ng-if="formSubmitted && !cummGroupModal.groupName" style="color: red;" id="groupName"> Input Required</span>
+                    <span ng-if="formSubmitted && !cummGroupModal.cumGrpName" style="color: red;" id="groupName"> Input Required</span>
                 </td>
                 
               </tr>
               <tr>
                 <th class="title">Fund Group Id</th>
                 <td >
-                    <select multiple="true" name="groupMembers" class="selectInput" ng-model="cummGroupModal.groupMembers">
+                    <select ng-if="formMode=='edit' || formMode=='add'" multiple="true" name="cumGrpMemId" class="selectInput" ng-model="cummGroupModal.cumGrpMemId">
                         <option ng-value="null"> Select Cumm. Group Member </option>
                         <option ng-repeat="option in cummGroupMemberOptions">{{option}}</option>
                     </select>
+                    <span ng-if="formMode=='view'">{{cummGroupModal.cumGrpMemId}}</span>
                 </td>
                 <td colspan="2">
-                    <span ng-if="formSubmitted && !cummGroupModal.groupMembers" style="color: red;" id="groupMembers"> Input Required</span>
+                    <span ng-if="formSubmitted && !cummGroupModal.cumGrpMemId" style="color: red;" id="cumGrpMemId"> Input Required</span>
                 </td>
                 
               </tr>
