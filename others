@@ -186,6 +186,8 @@ fetch(url, { method: 'DELETE', body: JSON.stringify($scope.exposureLimitModel)})
 
 
 
+var header = new Headers();
+myHeaders.append("Content-Type", "application/json");
 
 
 
