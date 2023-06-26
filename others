@@ -144,3 +144,52 @@ $http({
        data: $scope.exposureLimitModel
     })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fetch(url, { method: 'DELETE', body: JSON.stringify($scope.exposureLimitModel)})
+    .then(async response => {
+        const isJson = response.headers.get('content-type')?.includes('application/json');
+        const data = isJson && await response.json();
+
+        // check for error response
+        if(data && data.message){
+           $scope.errorMessageModal.errorMessage = data.message
+           $('#responseModel').modal('show')
+      }else{
+
+          $scope.errorMessageModal.errorMessage = 'Record deleted'
+           $('#responseModel').modal('show')
+    }
+
+    })
+    .catch(error => {
+          $scope.errorMessageModal.errorMessage = error.error
+           $('#responseModel').modal('show')
+        console.error('There was an error!', error);
+    });
+
+
+
+
+
+
+
+
+
+
+
