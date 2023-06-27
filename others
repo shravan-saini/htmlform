@@ -208,6 +208,7 @@ if($scope.exposureLimitModel.name && $scope.exposureLimitModel.name.indexOf('GRO
 }
 
 
+$scope.exposureLimitModel.cumGrpMemId = $scope.exposureLimitModel.cumGrpMemId.map(Number);
 
 
 
