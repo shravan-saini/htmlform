@@ -194,4 +194,30 @@ myHeaders.append("Content-Type", "application/json");
 
 
 
+if($scope.exposureLimitModel.name && $scope.exposureLimitModel.name.indexOf('GROUP')>=0){
+    var ids = $scope.exposureLimitModel.name.slice($scope.exposureLimitModel.name.indexOf('GROUP')+5)
+    ids = ids.split('_')
+    console.log(ids)
+    if(ids.indexOf($scope.exposureLimitModel.cumGrpMemId)>=0){
+  $scope.exposureLimitModel.cumGrpMemId = ids;
+}else{
+    $scope.exposureLimitModel.cumGrpMemId = [$scope.exposureLimitModel.cumGrpMemId].concat(ids)
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
