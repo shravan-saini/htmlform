@@ -216,7 +216,7 @@ $scope.exposureLimitModel.cumGrpMemId = $scope.exposureLimitModel.cumGrpMemId.ma
 
 
 
-
+$scope.exposureLimitModel.cumGrpMemId = $scope.exposureLimitModel.cumGrpMemId.join(',')
 
 
 
