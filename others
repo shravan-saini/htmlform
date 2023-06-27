@@ -222,3 +222,34 @@ $scope.exposureLimitModel.cumGrpMemId = $scope.exposureLimitModel.cumGrpMemId.jo
 
 
 
+
+
+$scope.getExposureDetails = function(){
+
+
+            var url = 'https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json'
+        $scope.loading = true
+        
+
+       $http.get(url)
+        .then(function(data){
+           $scope.limitName = data.allIndustories;
+            $scope.limitName = $scope.limitName.map(function(item){   return [item,item]})
+        },function(error){
+            $scope.loading = false
+            
+        })
+        
+
+
+
+
+   }
+
+
+
+
+
+
+
+
