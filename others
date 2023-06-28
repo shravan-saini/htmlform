@@ -249,8 +249,9 @@ $scope.getExposureDetails = function(){
 
 
 
-$('#memberIds').val(['1', '2']);
-
+setTimeout(function(){  
+ $('#memberIds').val(['1', '2']);
+}, 2000)
 
 
 
