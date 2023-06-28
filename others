@@ -249,6 +249,8 @@ $scope.getExposureDetails = function(){
 
 
 
+$('#memberIds').val(['1', '2']);
+
 
 
 
